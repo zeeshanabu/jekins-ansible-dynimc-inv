@@ -1,13 +1,14 @@
 provider "aws"{
-region = "ap-south-1"
+region="us-east-1" 
 }
 
-resource "aws_instance" "AWS_EC2INSTANCE"{
-ami = "ami-068e0f1a600cd311c"
+resource "aws-Instance" "AWSEC2Instance"{
+ami = "ami-0ba9883b710b05ac6"
 instance_type = "t2.micro"
-key_name = "devopsmssjuly"
-security_groups = ["launch-wizard-2"]
-tags = {
+key_name = "ansible"
+security_grouos = ["Allow-All']
+tags={
 Name = "terraformserver"
+
 }
 }
